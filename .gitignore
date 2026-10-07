@@ -1,0 +1,29 @@
+# Node dependencies & build
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+frontend/dist-ssr/
+
+# Python & Backend
+backend/__pycache__/
+backend/*.pyc
+backend/*.db
+backend/*.sqlite
+backend/venv/
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Environment & local files
+.env
+.env.local
+*.local
+*.log
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+get_video_info.ps1

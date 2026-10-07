@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Cormorant Garamond", "Italiana", Georgia, serif;
+    --font-italiana: "Italiana", "Cormorant Garamond", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    --font-calligraphy: "Pinyon Script", "Great Vibes", "Alex Brush", cursive;
+    --font-script: "Great Vibes", "Pinyon Script", cursive;
+    --font-display: "Playfair Display", "Italiana", Georgia, serif;
+    
+    --bg-dark: #050508;
+    --bg-card: rgba(16, 13, 20, 0.75);
+    --gold: #d4af37;
+    --gold-warm: #e5c158;
+    --gold-light: #f7edbe;
+    --cream: #faf6ee;
+    --cream-muted: #d6ccbe;
+    --wine: #31081a;
+    --rose: #e11d48;
+    --rose-soft: #fb7185;
+  }
+
+  body {
+    background-color: #040407;
+    color: #faf6ee;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  /* Custom romantic scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050508;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2030;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+  }
+}
+
+/* Luxury Romantic Typography */
+.font-serif-cinematic {
+  font-family: var(--font-serif);
+}
+
+.font-italiana {
+  font-family: var(--font-italiana);
+  letter-spacing: 0.08em;
+}
+
+.font-display-cinematic {
+  font-family: var(--font-display);
+}
+
+.font-calligraphy {
+  font-family: var(--font-calligraphy);
+  letter-spacing: 0.02em;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* 35mm Film Grain Overlay with Soft Warm Texture */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Cinematic Romantic Vignette */
+.cinematic-vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 40;
+  background: radial-gradient(circle at center, transparent 35%, rgba(4, 3, 6, 0.85) 100%);
+}
+
+/* Candlelight / Romantic Glows */
+.candle-glow {
+  text-shadow: 0 0 18px rgba(229, 193, 88, 0.45), 0 0 35px rgba(212, 175, 55, 0.2);
+}
+
+.rose-glow {
+  text-shadow: 0 0 20px rgba(244, 63, 94, 0.4), 0 0 40px rgba(225, 29, 72, 0.2);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.18), inset 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+/* Deluxe Smoky Glass Panel */
+.glass-panel {
+  background: rgba(14, 11, 18, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(229, 193, 88, 0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-romantic {
+  background: linear-gradient(135deg, rgba(20, 14, 25, 0.8) 0%, rgba(12, 9, 16, 0.7) 100%);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(229, 193, 88, 0.22);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.08);
+}
+
+/* Warm Polaroid Photo with Vintage Romance */
+.polaroid-card {
+  background: #fbf7ee;
+  color: #171311;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-8px) rotate(0deg) scale(1.025) !important;
+  box-shadow: 0 25px 55px rgba(212, 175, 55, 0.25), 0 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 25;
+}
+
+/* Antique Parchment Letter */
+.parchment-texture {
+  background-color: #faf5ea;
+  background-image: 
+    radial-gradient(circle at center, transparent 65%, rgba(175, 137, 85, 0.12) 100%),
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: auto, 100% 32px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), inset 0 0 80px rgba(184, 143, 85, 0.15);
+}
+
+/* Anamorphic Light Leaks Animation */
+@keyframes romanticLightLeak {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.2) translate(30px, -20px);
+  }
+}
+
+.animate-romantic-leak {
+  animation: romanticLightLeak 16s ease-in-out infinite alternate;
+}
